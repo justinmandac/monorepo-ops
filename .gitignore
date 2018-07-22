@@ -1,2 +1,5 @@
 node_modules/
-packages/**/node_modules
+**/node_modules
+**/bower_components
+*.log
+**/dist
