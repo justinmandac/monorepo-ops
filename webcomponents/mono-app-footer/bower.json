@@ -1,0 +1,21 @@
+{
+  "name": "mono-app-footer",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "justinmandac <justinmandac@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/justinmandac/monorepo-ops",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-styles": "PolymerElements/paper-styles#^2.1.0",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#^2.0.3"
+  }
+}
