@@ -1,3 +1,12 @@
 import MonoAppHeader from './src/mono-app-header.js'
 
-export default MonoAppHeader;
+function register() {
+   if (customElements.get(MonoAppHeader.is) === undefined) {
+     customElements.define(MonoAppHeader.is, MonoAppHeader);
+   }
+}
+
+export default {
+  MonoAppHeader,
+  register,
+};
