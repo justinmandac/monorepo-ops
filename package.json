@@ -1,0 +1,7 @@
+{
+	"devDependencies": {
+		"lerna": "^2.11.0",
+		"webpack": "^4.16.1",
+		"webpack-cli": "^3.1.0"
+	}
+}
