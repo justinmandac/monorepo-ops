@@ -4,7 +4,7 @@
     "packages/*",
     "webcomponents/*",
     "apps/*",
-    "commands/*"
+    "commands/"
   ],
   "version": "independent"
 }
