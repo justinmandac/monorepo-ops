@@ -1,0 +1,22 @@
+{
+  "name": "mono-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@polymer/lit-element": "^0.5.2",
+    "@webcomponents/webcomponentsjs": "^2.0.3",
+    "mono-app-footer": "^1.0.0",
+    "mono-app-header": "^1.0.0"
+  },
+  "devDependencies": {
+    "html-loader": "^0.5.5",
+    "webpack": "^4.16.1",
+    "webpack-serve": "^2.0.2"
+  }
+}
