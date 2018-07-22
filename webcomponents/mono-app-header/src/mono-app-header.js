@@ -2,6 +2,7 @@ import { LitElement, html } from '@polymer/lit-element';
 import template from './mono-app-header.template.html';
 
 class MonoAppHeader extends LitElement {
+  static get is() { return 'mono-app-header'; }
   static get properties() {
     return {};
   }
@@ -15,4 +16,4 @@ class MonoAppHeader extends LitElement {
   }
 }
 
-customElements.define('mono-app-header', MonoAppHeader);
+export default MonoAppHeader;
