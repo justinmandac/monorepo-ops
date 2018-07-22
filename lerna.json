@@ -3,7 +3,8 @@
   "packages": [
     "packages/*",
     "webcomponents/*",
-    "apps/*"
+    "apps/*",
+    "commands/*"
   ],
   "version": "independent"
 }
