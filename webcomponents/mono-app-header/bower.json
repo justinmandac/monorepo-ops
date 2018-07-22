@@ -1,0 +1,21 @@
+{
+  "name": "mono-app-header",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "justinmandac <justinmandac@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-styles": "PolymerElements/paper-styles#^2.1.0",
+    "app-layout": "PolymerElements/app-layout#^2.1.1"
+  }
+}
