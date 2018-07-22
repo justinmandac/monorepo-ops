@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    main: './src/mono-app.js',
+    'mono-app' : './src/mono-app.js',
   },
   output: {
     filename: '[name].js',
