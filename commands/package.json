@@ -1,0 +1,14 @@
+{
+  "name": "@monorepo-ops/commands",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "list:bower": "lerna exec --loglevel error --scope @monorepo-ops/commands -- node list-file-in-packages/index.js --root_path \\$LERNA_ROOT_PATH --file bower.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-glob": "^1.2.0",
+    "yargs": "^12.0.1"
+  }
+}
