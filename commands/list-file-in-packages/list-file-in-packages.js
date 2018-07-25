@@ -24,7 +24,7 @@ function listFileFromPaths(file, dirs) {
  * be found.
  * @return {Promise<Array<string>>}
 */
-module.exports = function listFileInPackages(file, packagesList) {
+function listFileInPackages(file, packagesList) {
   return Promise.all(
     packagesList.map(package => globPromise(package))
   )
@@ -32,3 +32,5 @@ module.exports = function listFileInPackages(file, packagesList) {
   .then(result => result.reduce((acc, next) => acc.concat(next), []))
   .then(result => listFileFromPaths(file, result));
 }
+
+module.exports.listFileInPackages = listFileInPackages;
