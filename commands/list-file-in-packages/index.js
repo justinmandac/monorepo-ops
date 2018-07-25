@@ -1,6 +1,6 @@
 const path = require('path');
 const listFileInPackages = require('./list-file-in-packages');
-const readJson = require('./read-json');
+const readJson = require('../read-json');
 const {
   root_path,
   package_file,
