@@ -1,0 +1,17 @@
+{
+  "name": "monorepo-ops",
+  "description": "",
+  "main": "",
+  "authors": [
+    "justinmandac <justinmandac@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/justinmandac/monorepo-ops",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
