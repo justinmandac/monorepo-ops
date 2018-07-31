@@ -69,8 +69,6 @@ listFileInPackages('bower.json', lernaPackages)
   .then(result => {
     fs.writeFileSync(`${resolvedRootPath}/bower.json`, result);
 
-    // console.log(ressult);
-
     if (install) {
       console.log('[INFO] Installing bower dependencies...');
       execPromise(`cd ${resolvedRootPath}; bower install`)
