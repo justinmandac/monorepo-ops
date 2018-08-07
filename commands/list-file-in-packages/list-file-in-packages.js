@@ -1,6 +1,4 @@
-const util = require('util');
-const globPromise = util.promisify(require('glob'));
-const execPromise = util.promisify(require('child_process').exec);
+const { globPromise, execPromise } = require('../command-utils');
 
 /**
  * @param {string} file File to find.
@@ -19,9 +17,19 @@ function listFileFromPaths(file, dirs) {
 }
 
 /**
- * @param {string} file File to search for amongst lerna packages.
+ * Flattens the array of node-glob results.
+ * @param {Array<Array<string>>} globResults
+ * @return {Array<string>}
+*/
+function globResultReducer(globResults) {
+  return globResults.reduce((acc, next) => acc.concat(next), []);
+}
+
+/**
+ * @param {string} file File to search for amongst lerna packages
+ *  (ie package.json, bower.json, etc.)
  * @param {Array<string>} packagesList List of globs where lerna packages can
- * be found.
+ *   be found.
  * @return {Promise<Array<string>>}
 */
 function listFileInPackages(file, packagesList) {
@@ -29,8 +37,8 @@ function listFileInPackages(file, packagesList) {
     packagesList.map(package => globPromise(package))
   )
   .then(result => result.filter(globResult => globResult.length))
-  .then(result => result.reduce((acc, next) => acc.concat(next), []))
-  .then(result => listFileFromPaths(file, result));
+  .then(globResultReducer)
+  .then(packageDirs => listFileFromPaths(file, packageDirs));
 }
 
 module.exports.listFileInPackages = listFileInPackages;
